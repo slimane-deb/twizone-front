@@ -9,8 +9,27 @@ import { FirstWithTabsPage } from './first-with-tabs.page';
 
 const routes: Routes = [
   {
+    path: 'tabs',
+    component: FirstWithTabsPage,
+    children: [
+      {
+        path: 'tab1',
+        loadChildren: '../tab1/tab1.module#Tab1PageModule'
+      },
+      {
+        path: 'tab1/details',
+        loadChildren: '../details/details.module#DetailsPageModule'
+      },
+      {
+        path: 'tab2',
+        loadChildren: '../tab2/tab2.module#Tab2PageModule'
+      }
+    ]
+  },
+  {
     path: '',
-    component: FirstWithTabsPage
+    redirectTo: 'tabs/tab1',
+    pathMatch: 'full'
   }
 ];
 

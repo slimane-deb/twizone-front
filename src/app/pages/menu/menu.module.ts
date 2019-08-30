@@ -10,9 +10,24 @@ import { MenuPage } from './menu.page';
 const routes: Routes = [
   {
     path: '',
-    component: MenuPage
+    component: MenuPage,
+    children: [
+      {
+        path: 'first',
+        loadChildren: '../first-with-tabs/first-with-tabs.module#FirstWithTabsPageModule'
+      },
+      {
+        path: 'second',
+        loadChildren: '../second/second.module#SecondPageModule'
+      },
+      {
+        path: 'second/details',
+        loadChildren: '../details/details.module#DetailsPageModule'
+      }
+    ]
   }
 ];
+
 
 @NgModule({
   imports: [
@@ -23,4 +38,4 @@ const routes: Routes = [
   ],
   declarations: [MenuPage]
 })
-export class MenuPageModule {}
+export class MenuPageModule { }
