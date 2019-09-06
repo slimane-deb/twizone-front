@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/places"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{place.title}}</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onSave()">
+        <ion-icon name="bookmark" slot="icon-only" [color]="place.isSaved ? 'dark': 'light'"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col no-padding>
+
+        <ion-img [src]="place.imgUrl"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1 text-center>{{place.title}}</h1>
+        {{place.description}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
