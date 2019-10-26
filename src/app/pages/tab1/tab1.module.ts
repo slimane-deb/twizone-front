@@ -8,6 +8,7 @@ import { IonicModule } from '@ionic/angular';
 import { Tab1Page } from './tab1.page';
 import {BookmarksComponent} from '../places/bookmarks/bookmarks.component';
 import {PlaceDetailComponent} from '../places/place-detail/place-detail.component';
+import {PlacesPageModule} from '../places/places.module';
 
 const routes: Routes = [
   {
@@ -29,6 +30,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+      PlacesPageModule,
       RouterModule.forChild(routes)
   ],
   declarations: [Tab1Page, PlaceDetailComponent, BookmarksComponent]

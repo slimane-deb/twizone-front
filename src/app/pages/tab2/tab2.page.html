@@ -1,9 +1,29 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>tab2</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+<!--    <ion-title>Local Places</ion-title>-->
+    <ion-searchbar placeholder="Filter Local Places" color="primary"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+<!--  <ion-spinner name="crescent" *ngIf="isLoaded"></ion-spinner>-->
+  <div class="ion-padding horizontal-cards" *ngIf="!isLoaded">
+
+    <ion-card color="light" *ngFor="let c of locals">
+      <ion-card-header>
+        <ion-card-title>{{c.name}}</ion-card-title>
+        <ion-card-subtitle>{{c.category}}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        {{c.description}}
+      </ion-card-content>
+      <img src="assets/shop.jpg">
+    </ion-card>
+
+  </div>
 
 </ion-content>

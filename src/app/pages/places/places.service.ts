@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Place} from '../../model/Place';
+import {Place} from '../../model/place';
 
 @Injectable({
   providedIn: 'root'
@@ -10,13 +10,13 @@ export class PlacesService {
       id: '1',
       title: 'Mzab Vally',
       description: 'Une place super touristique',
-      wilaya: 'Ghardaia',
+      city : {id: 0, name: 'Ghardaia', wilaya: 'Ghardaia'},
       imgUrl: 'assets/places/mzab-valley.jpg',
     },
     {
       id: '2',
       title: 'Golea',
-      wilaya: 'Ghardaia',
+      city : {id: 0, name: 'Meniaa', wilaya: 'Ghardaia'},
       imgUrl: 'assets/places/golea-meniaa.jpg',
     }
   ];
