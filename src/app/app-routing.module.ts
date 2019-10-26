@@ -7,21 +7,28 @@ const routes: Routes = [
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
   { path: 'menu', loadChildren: './pages/menu/menu.module#MenuPageModule' },
   {
-    path: 'places',
+    // path: 'places',
+    // children: [
+    //   {
+    //     path: '',
+    //     loadChildren: './pages/places/places.module#PlacesPageModule'
+    //   },
+    //   {
+    //     path: ':placeId',
+    //     loadChildren: './pages/places/place-detail/place-detail.module#PlaceDetailPageModule'
+    //   }
+    // ]
+  },
+  { path: 'first-with-tabs', loadChildren: './pages/first-with-tabs/first-with-tabs.module#FirstWithTabsPageModule' },
+  { path: 'second', loadChildren: './pages/second/second.module#SecondPageModule' },
+  { path: 'places',
     children: [
       {
         path: '',
         loadChildren: './pages/places/places.module#PlacesPageModule'
-      },
-      {
-        path: ':placeId',
-        loadChildren: './pages/places/place-detail/place-detail.module#PlaceDetailPageModule'
       }
     ]
   },
-  { path: 'first-with-tabs', loadChildren: './pages/first-with-tabs/first-with-tabs.module#FirstWithTabsPageModule' },
-  { path: 'second', loadChildren: './pages/second/second.module#SecondPageModule' },
-  { path: 'tab1', loadChildren: './pages/tab1/tab1.module#Tab1PageModule' },
   { path: 'tab2', loadChildren: './pages/tab2/tab2.module#Tab2PageModule' },
   { path: 'details', loadChildren: './pages/details/details.module#DetailsPageModule' },
 ];

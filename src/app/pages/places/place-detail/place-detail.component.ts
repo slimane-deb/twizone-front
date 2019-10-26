@@ -6,10 +6,10 @@ import {AlertController} from '@ionic/angular';
 
 @Component({
   selector: 'app-place-detail',
-  templateUrl: './place-detail.page.html',
-  styleUrls: ['./place-detail.page.scss'],
+  templateUrl: './place-detail.component.html',
+  styleUrls: ['./place-detail.component.scss'],
 })
-export class PlaceDetailPage implements OnInit {
+export class PlaceDetailComponent implements OnInit {
   place: Place;
 
   constructor(private route: ActivatedRoute,

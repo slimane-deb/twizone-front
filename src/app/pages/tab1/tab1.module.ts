@@ -6,11 +6,21 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { Tab1Page } from './tab1.page';
+import {BookmarksComponent} from '../places/bookmarks/bookmarks.component';
+import {PlaceDetailComponent} from '../places/place-detail/place-detail.component';
 
 const routes: Routes = [
   {
     path: '',
     component: Tab1Page
+  },
+  {
+    path: ':placeId',
+    component: PlaceDetailComponent
+  },
+  {
+    path: 'bookmarks',
+    component: BookmarksComponent
   }
 ];
 
@@ -19,8 +29,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+      RouterModule.forChild(routes)
   ],
-  declarations: [Tab1Page]
+  declarations: [Tab1Page, PlaceDetailComponent, BookmarksComponent]
 })
 export class Tab1PageModule {}
