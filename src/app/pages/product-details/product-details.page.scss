@@ -1,0 +1,17 @@
+ion-checkbox {
+    --background: #a3a3a3;
+    --background-checked: #ff6969;
+    // --border-color: #3880ff;
+    // --border-color-checked: #3880ff;
+    --border-radius: 50%;
+    --border-style: solid;
+    --border-width: 1px;
+    --checkmark-color-width: white;
+    --size: 18px;
+    --transition: background-color 15ms linear;
+
+    .checkbox-icon {
+        padding: 10px;
+
+    }
+}

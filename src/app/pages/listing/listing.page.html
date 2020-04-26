@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{pageName}}</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-segment (ionChange)="segmentChanged($event)">
+
+      <ion-segment-button *ngFor="let item of SelectedCategories;let i=index;" [value]="item.id" [checked]="i==0">
+        {{item.name}}
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+  <ion-content>
+    <!-- <ion-img src="https://via.placeholder.com/300X150"></ion-img> -->
+
+    <ion-list>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="6" *ngFor="let item of filtered">
+            <ion-card>
+              <div class="img-container" style="height:200px;">
+                <img [src]="item.product_img" style="height: 100%;display: block;">
+              </div>
+              <ion-card-content>
+                <ion-card-title>
+                  {{item.name}}
+                </ion-card-title>
+                <ion-card-subtitle>{{item.weight}}</ion-card-subtitle>
+                <div style="display: flex;justify-content:space-between;">
+                  <ion-card-subtitle>{{item.price}}</ion-card-subtitle>
+                  <ion-checkbox checked="false" slot="end"></ion-checkbox>
+                </div>
+                <ion-button (click)="Details(item.id)">
+                  Details
+                </ion-button>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-list>
+
+  </ion-content>
+  <!-- <ion-tabs class="nav">
+  <ion-tab-bar slot="top">
+    <ion-tab-button tab="1" > 
+      <ion-label>Meat</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button [tab]="2" selected>
+      <ion-label>Fish</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs> -->
+  <ion-toolbar class="bottom-nav">
+    <ion-segment>
+
+      <ion-segment-button value="sort">
+        sort
+      </ion-segment-button>
+      <ion-segment-button value="filter">
+        filter
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>

@@ -1,0 +1,28 @@
+ion-slides {
+    height: 100%;
+    padding-top: 20px;
+    --bullet-background: white;
+    --bullet-background-active: #ff6969;
+    background: #f1f1f1;
+    --bullet-border: black;
+
+    ion-slide {
+        height: 100%;
+        padding: 0px 40px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .img-container {
+
+            height: 30%;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: .6em;
+            line-height: 1em;
+        }
+    }
+
+}

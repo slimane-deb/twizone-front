@@ -14,15 +14,15 @@ const routes: Routes = [
     children: [
       {
         path: 'first',
-        loadChildren: '../first-with-tabs/first-with-tabs.module#FirstWithTabsPageModule'
+        loadChildren: () => import('../first-with-tabs/first-with-tabs.module').then(m => m.FirstWithTabsPageModule)
       },
       {
         path: 'second',
-        loadChildren: '../second/second.module#SecondPageModule'
+        loadChildren: () => import('../second/second.module').then( m => m.SecondPageModule)
       },
       {
         path: 'second/details',
-        loadChildren: '../details/details.module#DetailsPageModule'
+        loadChildren: () => import('../details/details.module').then( m => m.DetailsPageModule)
       }
     ]
   }

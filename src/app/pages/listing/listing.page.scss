@@ -1,0 +1,112 @@
+$market-app-primary:#ff6969;
+
+ion-segment-button {
+
+    --color-activated: #ff6969;
+    --color-checked: #ff6969;
+    --color: black;
+    --transition: background-color 15ms linear;
+}
+
+ion-tabs.nav {
+
+    position: relative !important;
+
+    ion-tab-bar {
+        --background: #ff6969;
+        --border-radius: 50px;
+        --color: white;
+    }
+
+    ion-tab-button {
+
+        --padding-bottom: 0px;
+        --padding-end: 0px;
+        --padding-start: 0px;
+        --padding-top: 0px;
+        font-size: 1em;
+    }
+
+}
+
+ion-toolbar.header {
+    --background: transparent;
+    // --opacity: 0;
+    position: relative;
+    display: block;
+    height: 20%;
+
+    &::after {
+        content: "";
+        background: url('https://via.placeholder.com/150');
+        opacity: 0.5;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+        background-position: center;
+        background-size: cover;
+
+    }
+}
+
+ion-card {
+    margin: 0px;
+}
+
+ion-checkbox {
+    --background: #a3a3a3;
+    --background-checked: #ff6969;
+    // --border-color: #3880ff;
+    // --border-color-checked: #3880ff;
+    --border-radius: 50%;
+    --border-style: solid;
+    --border-width: 1px;
+    --checkmark-color-width: white;
+    --size: 18px;
+    --transition: background-color 15ms linear;
+
+    .checkbox-icon {
+        padding: 10px;
+
+    }
+}
+
+ion-back-button {
+    --color: white;
+    --color-hover: #3880ff;
+    --icon-font-size: 18px;
+    --ripple-color: #1e1e1e;
+    text-transform: none;
+    --transition: background-color 15ms linear;
+}
+
+ion-icon {
+    color: #ffffff;
+    font-size: 24px;
+    // transform: rotate(90deg);
+}
+
+ion-toolbar.bottom-nav {
+
+    ion-segment-button {
+        --background: #ff6969;
+        --background-activated: #ff6969;
+        --background-checked: #ff6969;
+        --border-radius: 4px;
+        --color: white;
+        --color-activated: white;
+        --color-checked: white;
+        --margin-bottom: 4px;
+        --margin-end: 4px;
+        --margin-start: 4px;
+        --margin-top: 4px;
+        --padding-bottom: 4px;
+        --padding-end: 4px;
+        --padding-start: 4px;
+        --padding-top: 4px;
+        --transition: background-color 15ms linear;
+    }
+}

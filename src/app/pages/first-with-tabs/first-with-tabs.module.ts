@@ -9,26 +9,26 @@ import { FirstWithTabsPage } from './first-with-tabs.page';
 
 const routes: Routes = [
   {
-    path: 'tabs',
+    path: 'places',
     component: FirstWithTabsPage,
     children: [
       {
-        path: 'tab1',
-        loadChildren: '../tab1/tab1.module#Tab1PageModule'
+        path: 'tours',
+        loadChildren: () => import('../tab1/tab1.module').then( m => m.Tab1PageModule)
       },
       {
-        path: 'tab1/details',
-        loadChildren: '../details/details.module#DetailsPageModule'
+        path: 'tours/details',
+        loadChildren: () => import('../details/details.module').then( m => m.DetailsPageModule)
       },
       {
-        path: 'tab2',
-        loadChildren: '../tab2/tab2.module#Tab2PageModule'
+        path: 'local',
+        loadChildren: () => import('../tab2/tab2.module').then( m => m.Tab2PageModule)
       }
     ]
   },
   {
     path: '',
-    redirectTo: 'tabs/tab1',
+    redirectTo: 'places/tours',
     pathMatch: 'full'
   }
 ];

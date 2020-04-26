@@ -11,12 +11,16 @@ export class MenuPage implements OnInit {
 
   pages = [
     {
-      title: 'First Page with Tabs',
+      title: 'Places',
       url: '/menu/first'
     },
     {
-      title: 'Second Page blank',
+      title: 'Stub',
       url: '/menu/second'
+    },
+    {
+      title: 'TwiZone',
+      url: '/home'
     }
   ];
 
