@@ -1,0 +1,62 @@
+{
+    "clear": "",
+    "menu": {
+        "search": "بحث",
+        "map": "الخريطة",
+        "profile": "الصفحة الشخصية",
+        "settings": "الإعدادات"
+    },
+    "registration": {
+        "title": "العنوان",
+        "registration-text": "نص التسجيل",
+        "password": "كلمة المرور",
+        "confirmation-password": "تأكيد كلمة المرور",
+        "first-name": "الاسم الأول",
+        "last-name": "اسم العائلة",
+        "phone-number": "رقم الهاتف",
+        "profession": "المهنة",
+        "all-empty": "يرجى ملء جميع الحقول المحددة",
+        "missing-email": "عنوان البريد الإلكتروني مفقود",
+        "invalid-email-format": "تنسيق البريد الإلكتروني غير صالح",
+        "missing-password": "كلمة المرور المفقودة",
+        "missing-confirmation-password": "كلمة مرور التأكيد مفقودة",
+        "unmatched-passwords": "كلمات المرور لا تتطابق",
+        "short-password": "5 أحرف كحد أدنى",
+        "already-in-use": "عنوان البريد الإلكتروني هذا قيد الاستخدام بالفعل",
+        "missing-first-name": "الاسم الأول مفقود",
+        "missing-last-name": "اسم العائلة المفقود",
+        "missing-phone-number": "رقم الهاتف مفقود",
+        "invalid-phone-number": "تنسيق غير صالح. يجب أن يحتوي رقم الهاتف على أرقام فقط",
+        "missing-profession": "اختر مهنة",
+        "professions": ["A", "B", "C"]
+    },
+    "login": {
+        "title": "تسجيل الدخول",
+        "login-text": "نص تسجيل الدخول",
+        "password": "كلمة المرور",
+        "registration": "تسجيل",
+        "all-empty": "يرجى ملء الحقل المحدد",
+        "missing-email": "عنوان البريد الإلكتروني مفقود",
+        "missing-password": "كلمة المرور مفقودة",
+        "wrong-data": "عنوان بريد إلكتروني أو كلمة مرور خاطئة",
+        "connection-error": "خطأ في الاتصال. عد لاحقًا"
+    },
+    "map": {
+        "title": "الخريطة"
+    },
+    "state": {
+        "available": "متاح",
+        "not-available": "غير متاح"
+    },
+    "marker": {
+        "hereyouare": "موقفك"
+    },
+    "search": {
+        "filter": "تصفية"
+    },
+    "popup": {
+        "your-position": "موقفك",
+        "phone": "رقم الهاتف:  ",
+        "available-from": "متاح من: "
+    }
+}

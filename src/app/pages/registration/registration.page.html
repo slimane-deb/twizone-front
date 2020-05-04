@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{ 'registration.title' | translate }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<!-- VISITOR -->
+<ion-content *ngIf="isVisitor(regType)">
+  <!-- lines="fulL" -->
+  <ion-list class="ion-no-margin ion-padding flexcol">
+    <!-- Email -->
+    <ion-item>
+      <ion-label position="stacked">Email <ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-input required type="email" [(ngModel)]="registrationDetails.username"></ion-input>
+    </ion-item>
+    <!-- Password -->
+    <ion-item>
+      <ion-label position="stacked">{{ 'registration.password' | translate }} <ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-input required type="password" [(ngModel)]="registrationDetails.password"></ion-input>
+    </ion-item>
+    <!-- Confirmation password -->
+    <ion-item>
+      <ion-label position="stacked">{{ 'registration.confirmation-password' | translate }} <ion-text color="danger">*
+        </ion-text>
+      </ion-label>
+      <ion-input required type="password" [(ngModel)]="registrationDetails.confirmationPassword"></ion-input>
+    </ion-item>
+    <!-- Message -->
+    <div id="message">
+      <ion-text color="danger">{{ message | translate }}</ion-text>
+    </div>
+
+    <div id="registration-div" class="ion-padding">
+      <!-- Registration button -->
+      <ion-button id="registration-button" expand="block" type="submit" class="ion-no-margin" (click)="onRegistrationClick()">
+        {{ 'registration.registration-text' | translate }}
+      </ion-button>
+      <!-- TODO TEMP -->
+      <button (click)="handleRegistrationTypeChange()" style="margin: 20px;">Registration as a service provider</button>
+    </div>
+
+  </ion-list>
+</ion-content>
+
+<!-- CUSTOMER -->
+<ion-content *ngIf="!isVisitor(regType)">
+  <ion-list class="ion-no-margin ion-padding flexcol">
+    <!-- Email -->
+    <ion-item>
+      <ion-label position="stacked">Email <ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-input required type="email" [(ngModel)]="profileRegistrationDetails.username"></ion-input>
+    </ion-item>
+    <!-- Password -->
+    <ion-item>
+      <ion-label position="stacked">{{ 'registration.password' | translate }} <ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-input required type="password" [(ngModel)]="profileRegistrationDetails.password"></ion-input>
+    </ion-item>
+    <!-- confirmation password -->
+    <ion-item>
+      <ion-label position="stacked">{{ 'registration.confirmation-password' | translate }} <ion-text color="danger">*
+        </ion-text>
+      </ion-label>
+      <ion-input required type="password" [(ngModel)]="profileRegistrationDetails.confirmationPassword"></ion-input>
+    </ion-item>
+    <!-- Last name -->
+    <ion-item>
+      <ion-label position="stacked">{{ 'registration.last-name' | translate }} <ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-input required type="text" [(ngModel)]="profileRegistrationDetails.lastName"></ion-input>
+    </ion-item>
+    <!-- First name -->
+    <ion-item>
+      <ion-label position="stacked">{{ 'registration.first-name' | translate }} <ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-input required type="text" [(ngModel)]="profileRegistrationDetails.firstName"></ion-input>
+    </ion-item>
+    <!-- Phone number -->
+    <ion-item>
+      <ion-label position="stacked">{{ 'registration.phone-number' | translate }} <ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-input required type="tel" [(ngModel)]="profileRegistrationDetails.phoneNumber"></ion-input>
+    </ion-item>
+    <!-- Profession -->
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">{{ 'registration.profession' | translate }} <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-select [(ngModel)]="profileRegistrationDetails.professionId">
+          <ion-select-option *ngFor="let profession of professions" value={{profession.id}}>
+            <p>{{ profession.name }}</p>
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <!-- Message -->
+    <div id="message">
+      <ion-text color="danger">{{ message | translate }}</ion-text>
+    </div>
+
+    <div id="profile-registration-div" class="ion-padding">
+      <!-- Registration button -->
+      <ion-button id="registration-button" expand="block" type="submit" class="ion-no-margin" (click)="onRegistrationClick()">
+        {{ 'registration.registration-text' | translate }}
+      </ion-button>
+    </div>
+
+    <!-- TODO temp -->
+    <button (click)="handleRegistrationTypeChange()">Back</button>
+
+  </ion-list>
+</ion-content>

@@ -1,14 +1,15 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-back-button text=""></ion-back-button>
     </ion-buttons>
     <ion-title>{{pageName}}</ion-title>
   </ion-toolbar>
+
   <ion-toolbar>
     <ion-segment (ionChange)="segmentChanged($event)">
 
-      <ion-segment-button *ngFor="let item of SelectedCategories;let i=index;" [value]="item.id" [checked]="i==0">
+      <ion-segment-button *ngFor="let item of SelectedProfessions;let i=index;" [value]="item.id" [checked]="i==0">
         {{item.name}}
       </ion-segment-button>
     </ion-segment>
@@ -25,7 +26,7 @@
           <ion-col size="6" *ngFor="let item of filtered">
             <ion-card>
               <div class="img-container" style="height:200px;">
-                <img [src]="item.product_img" style="height: 100%;display: block;">
+                <img [src]="item.profileImg" style="height: 100%;display: block;">
               </div>
               <ion-card-content>
                 <ion-card-title>

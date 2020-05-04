@@ -1,9 +1,48 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Tabs + Side Menu</ion-title>
+  <ion-toolbar>
+    <ion-title>
+      {{ 'login.title' | translate }}
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-button expand="block" routerLink="/menu/first">Login</ion-button>
+<ion-content>
+  <!-- lines="fulL" -->
+  <ion-list class="ion-no-margin ion-padding flexcol">
+
+    <ion-item>
+      <ion-label position="stacked">Email <ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-input required type="email" [(ngModel)]="loginDetails.username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">{{ 'login.password' | translate }} <ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-input required type="password" [(ngModel)]="loginDetails.password"></ion-input>
+    </ion-item>
+    <div id="message">
+      <ion-text color="danger">{{ message | translate }}</ion-text>
+    </div>
+
+    <div id="login-registration-div" class="ion-padding">
+      <ion-button id="login-button" expand="block" type="submit" (click)="onLoginClick()">
+        {{ 'login.login-text' | translate }}
+      </ion-button>
+
+        <ion-button expand="block" routerLink="/registration" routerDirection="root">{{ 'login.registration' | translate }}
+        </ion-button>
+      <!-- TODO TEMP -->
+      <!-- ---------------- -->
+      <ion-button id="login-button-without-registration" expand="block" type="submit" class="ion-no-margin" color="tertiary"
+        (click)="enterWithoutLogin()">
+        Continue
+      </ion-button>
+      <!-- ---------------- -->
+    </div>
+  </ion-list>
+  <!-- TODO this is just for TESTing -->
+  <button (click)="translateService.use('en')">en</button>
+  <button (click)="translateService.use('ar')">ar</button>
+
 </ion-content>

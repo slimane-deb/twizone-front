@@ -20,7 +20,11 @@ export class MenuPage implements OnInit {
     },
     {
       title: 'TwiZone',
-      url: '/home'
+      url: '/menu/home'
+    },
+    {
+      title: 'Carte',
+      url: '/menu/tabs'
     }
   ];
 

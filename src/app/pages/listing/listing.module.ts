@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 import { ListingPageRoutingModule } from './listing-routing.module';
 
 import { ListingPage } from './listing.page';
-import {SubcategoryComponent} from './subcategory/subcategory.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -15,8 +14,6 @@ import {SubcategoryComponent} from './subcategory/subcategory.component';
     IonicModule,
     ListingPageRoutingModule,
   ],
-  declarations: [ListingPage,
-    SubcategoryComponent
-  ]
+  declarations: [ListingPage  ]
 })
 export class ListingPageModule {}

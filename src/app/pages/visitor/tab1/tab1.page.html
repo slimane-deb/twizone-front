@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-searchbar id="search"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div>
+    <ion-list id="list-padding">
+      <ion-radio-group (ionChange)="radioGroupChange($event)">
+        <ion-list-header>
+          {{ 'search.filter' | translate }}
+        </ion-list-header>
+        <ion-list id="inner-product-list">
+
+          <ion-item *ngFor="let profession of professions">
+            <ion-label>{{ profession.name }}</ion-label>
+            <ion-radio value={{profession.id}}></ion-radio>
+          </ion-item>
+
+        </ion-list>
+      </ion-radio-group>
+    </ion-list>
+
+    <div id="search-buttons-wrapper" *ngIf="selectedProfession">
+      <ion-button (click)="onSearchClick()">search</ion-button>
+    </div>
+  </div>
+
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{ 'map.title' | translate }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div id="map_expert">
+    <div id="find-me-button-wrapper" class="leaflet-top leaflet-left">
+        <div id="find-me">
+          <ion-button id="find-me-button" color="light" (click)="relocate()">O</ion-button>
+        </div>
+    </div>
+</div>
+
+<div id="state-buttons-wrapper">
+  <ion-button color="{{availableButtonColor}}" (click)="onStatusChange(profile.id, 0)">
+    {{ 'state.available' | translate }}</ion-button>
+  <ion-button color="{{notAvailableButtonColor}}" (click)="onStatusChange(profile.id, 1)">
+    {{ 'state.not-available' | translate }}</ion-button>
+</div>
+
+<ion-item hidden>
+  <ion-datetime id="date-selector" displayFormat="MMM D H:mm" value="{{selectedDate}}"
+    (ionChange)="onDateChange(profile.id, $event.target.value)"></ion-datetime>
+</ion-item>

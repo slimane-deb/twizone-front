@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {PlacesService} from '../places.service';
-import {Place} from '../../../model/place';
+import {Place} from '../../../models/place';
 import {AlertController} from '@ionic/angular';
 
 @Component({

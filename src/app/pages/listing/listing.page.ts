@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NavParams, NavController } from '@ionic/angular';
 import { ActivatedRoute, Router } from '@angular/router';
-import {Product, Category} from '../../model';
-import {TwizoneService} from '../../sevices/twizone.service';
+import {Profile, Profession} from '../../models';
+import {TwizoneService} from '../../services/twizone.service';
 
 @Component({
   selector: 'app-listing',
@@ -11,12 +11,12 @@ import {TwizoneService} from '../../sevices/twizone.service';
 })
 export class ListingPage implements OnInit {
 
-  Category: Category;
-  filtered: Product[];
-  SelectedCategories: Category[] = [];
+  Profession: Profession;
+  filtered: Profile[];
+  SelectedProfessions: Profession[] = [];
   ids = [];
-  categories: Category[] = [];
-  currentCategoryId: number;
+  categories: Profession[] = [];
+  currentProfessionId: number;
   pageName = '';
   constructor(private twizoneService: TwizoneService, private route: ActivatedRoute, private navCtrl: NavController,
               private router: Router) {
@@ -24,7 +24,7 @@ export class ListingPage implements OnInit {
     // console.log(id);
     // let name = navParams.get('name');
     this.route.params.subscribe(res => {
-      this.currentCategoryId = +res.id;
+      this.currentProfessionId = +res.id;
     });
     this.route.queryParamMap.subscribe(res => {
       res.getAll('q').forEach(str => {
@@ -38,7 +38,7 @@ export class ListingPage implements OnInit {
 
     this.twizoneService.getMarket().subscribe(res => {
       this.categories = res;
-      this.SelectedCategories = res.filter(cat => {
+      this.SelectedProfessions = res.filter(cat => {
         if (this.ids.indexOf(+cat.id) > -1) {
           let convertedName = cat.name.slice(0, 1).toUpperCase();
 
@@ -52,21 +52,21 @@ export class ListingPage implements OnInit {
           return cat;
         }
       });
-      this.Category = this.SelectedCategories[0];
-      this.filtered = this.Category.products;
+      this.Profession = this.SelectedProfessions[0];
+      this.filtered = this.Profession.profiles;
     });
 
   }
-  // filtered = this.Category.filter(item => item.category == '1');
+  // filtered = this.Profession.filter(item => item.profession == '1');
   segmentChanged(e) {
     // console.log(e.target.value);
-    this.twizoneService.getCategory(e.target.value).subscribe(res => {
-      this.Category = res;
-      this.filtered = res.products;
+    this.twizoneService.getProfession(e.target.value).subscribe(res => {
+      this.Profession = res;
+      this.filtered = res.profiles;
     });
   }
   Details(id) {
-    this.navCtrl.navigateForward('details/' + this.Category.name + '/' + id);
+    this.navCtrl.navigateForward('details/' + this.Profession.name + '/' + id);
   }
 
 }

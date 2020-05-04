@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import {Category} from '../../model';
-import {TwizoneService} from '../../sevices/twizone.service';
+import {Profession} from '../../models';
+import {TwizoneService} from '../../services/twizone.service';
 
 
 @Component({
@@ -11,7 +11,7 @@ import {TwizoneService} from '../../sevices/twizone.service';
 })
 export class HomePage implements OnInit {
 
-  categories: Category[];
+  categories: Profession[];
   constructor(public navCtrl: NavController, private twizoneService: TwizoneService) {}
   goToListing(...args: []) {
     let newRoute = '';

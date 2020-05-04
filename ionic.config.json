@@ -1,5 +1,7 @@
 {
   "name": "tour-blank",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

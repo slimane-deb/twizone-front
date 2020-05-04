@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {City} from '../../model/city';
-import {Local} from '../../model/local';
+import {Local} from '../../models';
 import {LoadingController} from '@ionic/angular';
 
 @Component({

@@ -1,0 +1,62 @@
+{
+    "clear": "",
+    "menu": {
+        "search": "Search",
+        "map": "Map",
+        "profile": "Profile",
+        "settings": "Settings"
+    },
+    "registration": {
+        "title": "Registration",
+        "registration-text": "Sign up",
+        "password": "Password",
+        "confirmation-password": "Confirmation password",
+        "first-name": "First name",
+        "last-name": "Last name",
+        "phone-number": "Phone number",
+        "profession": "Profession",
+        "all-empty": "Please fill out all the given fields",
+        "missing-email": "Email address is missing",
+        "invalid-email-format": "Invalid email format",
+        "missing-password": "Password is missing",
+        "missing-confirmation-password": "Confirmation password is missing",
+        "unmatched-passwords": "Passwords do not match",
+        "short-password": "5 characters minimum",
+        "already-in-use": "This email address is already in use",
+        "missing-first-name": "Missing first name",
+        "missing-last-name": "Missing last name",
+        "missing-phone-number": "Missing phone number",
+        "invalid-phone-number": "Invalid format. Phone number must contains only numbers",
+        "missing-profession": "Select a profession",
+        "professions": ["A", "B", "C"]
+    },
+    "login": {
+        "title": "Login",
+        "login-text": "Sign in",
+        "password": "Password",
+        "registration": "Sign up",
+        "all-empty": "Please fill out the given field",
+        "missing-email": "Email address is missing",
+        "missing-password": "Password is missing",
+        "wrong-data": "Wrong email address or password",
+        "connection-error": "Connection error. Come back later"
+    },
+    "map": {
+        "title": "Map"
+    },
+    "state": {
+        "available": "Available",
+        "not-available": "Not available"
+    },
+    "marker": {
+        "hereyouare": "Your position"
+    },
+    "search": {
+        "filter": "Filter"
+    },
+    "popup": {
+        "your-position": "Your position",
+        "phone": "Phone number: ",
+        "available-from": "Available from: "
+    }
+}

@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- <ion-title>
+      {{ 'map.title' | translate }}
+    </ion-title> -->
+    <ion-searchbar (click)="onSearchInputClick()"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<!-- <div id="map"></div> -->
+<div id="map">
+    <div id="find-me-button-wrapper" class="leaflet-top leaflet-left">
+        <div id="find-me">
+          <ion-button id="find-me-button" color="light" (click)="relocate(currentPosition)">O</ion-button>
+        </div>
+    </div>
+</div>

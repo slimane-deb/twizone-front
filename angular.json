@@ -12,10 +12,12 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss",
-          "skipTests": true
+          "skipTests": true,
+          "spec": false
         },
         "@schematics/angular:class": {
-          "skipTests": true
+          "skipTests": true,
+          "spec": false
         },
         "@schematics/angular:directive": {
           "skipTests": true
@@ -30,7 +32,8 @@
           "skipTests": true
         },
         "@schematics/angular:service": {
-          "skipTests": true
+          "skipTests": true,
+          "spec": false
         }
       },
         "architect": {
